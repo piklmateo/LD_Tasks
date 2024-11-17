@@ -10,3 +10,7 @@ demo: https://piklmateo.github.io/Dice-Game/
 Wild oasis site - Cabin management system (backend + frontend) - not finished
 github: https://github.com/piklmateo/wild-oasis
 demo pictures: assets folder
+---------------------------------------------
+Pizza Restaurant app
+has geolocation and reverse geolocation feature to get user location when ordering
+github: https://github.com/piklmateo/pizza-app-ReduxToolkit-ReactQuery
