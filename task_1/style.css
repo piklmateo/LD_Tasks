@@ -120,7 +120,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 
   text-align: center;
   max-width: 512px;
@@ -144,6 +144,9 @@ h6 {
   background-color: var(--bg-color-primary);
   color: var(--txt-color-dark);
   border: 1px solid var(--txt-color-dark);
+
+  width: 170px;
+  height: 52px;
 
   padding-block: 12px;
   padding-inline: 24px;

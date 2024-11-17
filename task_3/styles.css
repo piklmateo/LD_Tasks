@@ -86,7 +86,7 @@ h6 {
 }
 
 .swiper-slide img {
-  width: 343px;
+  min-width: 343px;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -116,7 +116,7 @@ h6 {
   width: 32px;
   background-color: var(--bg-color--dark);
   padding: 8px;
-  margin-right: 10%;
+  margin-right: 7.5%;
   border-radius: 40px;
   cursor: pointer;
 }
@@ -146,10 +146,6 @@ h6 {
 
   cursor: pointer;
   transition: 100ms ease-in-out;
-}
-
-.btn-toggle-swiper:hover {
-  background-color: var(--bg-color--light);
 }
 
 @media (min-width: 376px) {
@@ -200,7 +196,6 @@ h6 {
 @media (min-width: 1399px) {
   .carousel {
     position: relative;
-
     display: flex;
   }
 
