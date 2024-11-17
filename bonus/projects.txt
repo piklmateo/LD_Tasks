@@ -1,0 +1,12 @@
+Final university project - Restaurant app
+github: https://github.com/piklmateo/zavrsni
+demo: https://zavrsni-server.vercel.app/
+user: admin, pass: 321321
+---------------------------------------------
+Dice mini game
+github: https://github.com/piklmateo/Dice-Game
+demo: https://piklmateo.github.io/Dice-Game/
+---------------------------------------------
+Wild oasis site - Cabin management system (backend + frontend) - not finished
+github: https://github.com/piklmateo/wild-oasis
+demo pictures: assets folder

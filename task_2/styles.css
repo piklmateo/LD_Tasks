@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --txt-color--dark: #000000;
+
+  --fs-heading--regular: 54px;
+  --fs-heading--small: 36px;
+  --fs-text--regular: 24px;
+  --fs-text--small: 20px;
+  --fs-link--regular: 20px;
+  --fs-link--small: 18px;
+
+  --fs-card--regular: 28px;
+
+  /*---font-weight---*/
+  --fw-heading--regular: 600;
+  --fw-text--regular: 400;
+  --fw-link--regular: 600;
+
+  --fw-card--regular: 600;
+
+  /*--line-height---*/
+  --lh-heading--regular: 59.4px;
+  --lh-heading--small: 39.6px;
+
+  --lh-text--regular: 26px;
+  --lh-text--small: 31.2px;
+
+  --lh-link--regular: 26px;
+  --lh-link--small: 23.4px;
+
+  --lh-card--regular: 39.6px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.section-recipes {
+  font-family: "Roboto", serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+
+.recipes-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 32px;
+  gap: 16px;
+}
+
+.recipes-header h1 {
+  font-size: var(--fs-heading--regular);
+  font-weight: var(--fw-heading--regular);
+  line-height: var(--lh-heading--regular);
+
+  text-transform: uppercase;
+}
+
+.recipes-header p {
+  font-size: var(--fs-text--regular);
+  font-weight: var(--fw-text--regular);
+  line-height: var(--lh-text--regular);
+
+  font-family: "Rajdhani", serif;
+}
+
+.recipes-header a {
+  font-size: var(--fs-link--regular);
+  font-weight: var(--fw-link--regular);
+  line-height: var(--lh-link--regular);
+
+  color: var(--txt-color--dark);
+
+  text-underline-offset: 12px;
+
+  text-transform: uppercase;
+}
+
+.recipes-content {
+  max-width: 1312px;
+  width: 100%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1;
+  place-items: center;
+
+  gap: 2rem;
+}
+
+.recipe-card {
+  max-width: 360px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.recipe-card p {
+  max-width: 360px;
+  max-height: 472px;
+
+  font-size: var(--fs-card--regular);
+  font-weight: var(--fw-card--regular);
+  line-height: var(--lh-card--regular);
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.image-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 360px;
+  max-height: 360px;
+
+  margin-bottom: 2rem;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  position: relative;
+  z-index: 2;
+}
+
+.corner-image {
+  position: absolute;
+
+  width: 100%;
+  height: auto;
+  max-width: 267.66px;
+  max-height: 253.06px;
+
+  z-index: 1;
+}
+
+.top-left {
+  max-width: 267.66px;
+  max-height: 253.05px;
+
+  top: -100px;
+  left: -114px;
+  transform: scaleX(-1);
+}
+.top-right {
+  max-width: 232.73px;
+  max-height: 188.33px;
+
+  top: -15px;
+  right: -70px;
+  transform: scaleX(-1);
+  transform: rotate(115deg);
+}
+.bottom-left {
+  max-width: 232.73px;
+  max-height: 188.33px;
+
+  bottom: -55px;
+  left: -75px;
+}
+.bottom-right {
+  max-width: 232.73px;
+  max-height: 188.33px;
+
+  bottom: -10px;
+  right: -80px;
+}
+
+@media (max-width: 1300px) {
+  .recipes-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
+    place-items: center;
+    padding-inline: 1rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipes-content {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .section-recipes {
+    gap: 2rem;
+    padding-block: 4rem;
+    padding-inline: 1rem;
+  }
+
+  .recipes-header {
+    margin-top: 2rem;
+  }
+
+  .recipes-header h1 {
+    font-size: var(--fs-heading--small);
+    line-height: var(--lh-heading--small);
+  }
+
+  .recipes-header p {
+    font-size: var(--fs-text--small);
+    line-height: var(--lh-text--small);
+  }
+
+  .recipes-header a {
+    font-size: var(--fs-link--small);
+    line-height: var(--lh-link--small);
+  }
+
+  .recipes-content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .image-container {
+    position: relative;
+
+    width: 304px;
+    height: 304px;
+
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+
+  .recipe-image {
+    width: 304px;
+    height: 304px;
+  }
+
+  .corner-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+
+    z-index: 1;
+  }
+
+  .top-left {
+    max-width: 226.02px;
+    max-height: 213.69px;
+
+    top: -85px;
+    left: -80px;
+  }
+  .top-right {
+    max-width: 196.53px;
+    max-height: 159.03px;
+
+    top: -42px;
+    right: -60px;
+  }
+
+  .bottom-left {
+    max-width: 196.53px;
+    max-height: 159.03px;
+
+    bottom: -48px;
+    left: -70px;
+  }
+  .bottom-right {
+    bottom: -35px;
+    right: -82px;
+  }
+
+  .bottom-right img {
+    width: 196.53px;
+    height: 159.03px;
+  }
+}

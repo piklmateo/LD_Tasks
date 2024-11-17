@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  /*---colors---*/
+  --bg-color-primary: #e3cfcf;
+  --bg-color-primary--hover: #f1d6d6;
+  --txt-color-dark: #000;
+
+  /*---font-size---*/
+  --fs-text--regular: 18px;
+  --fs-text--small: 16px;
+
+  --fs-heading--regular: 32px;
+  --fs-heading--small: 24px;
+
+  --fs-btn-regular: 14px;
+  --fs-btn-small: 12px;
+
+  /*---font-weight---*/
+  --fw-text: 300;
+  --fw-heading: 275;
+  --fw-btn: 500;
+
+  /*---line-height---*/
+  --lh-text--regular: 23.4px;
+  --lh-text--small: 20.8px;
+
+  --lh-heading--regular: 41.6px;
+  --lh-heading--small: 31.2px;
+
+  --lh-button--regular: 18.2px;
+  --lh-button--small: 15.6px;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Fira Sans", sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 576px;
+
+  height: 576px;
+
+  opacity: 0;
+  transition: 300ms ease-in;
+}
+
+.wrapper.in-view {
+  opacity: 1;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
+  background-color: var(--bg-color-primary);
+
+  padding-inline: 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  text-align: center;
+  max-width: 512px;
+}
+
+.content h1 {
+  font-size: var(--fs-heading--regular);
+  font-weight: var(--fw-heading);
+
+  line-height: var(--lh-heading--regular);
+  text-transform: uppercase;
+}
+
+.content p {
+  font-size: var(--fs-text--regular);
+  font-weight: var(--fw-text);
+  line-height: var(--lh-text--regular);
+}
+
+.content-button {
+  background-color: var(--bg-color-primary);
+  color: var(--txt-color-dark);
+  border: 1px solid var(--txt-color-dark);
+
+  padding-block: 12px;
+  padding-inline: 24px;
+
+  font-size: var(--fs-btn-regular);
+  font-weight: var(--fw-btn);
+  line-height: var(--lh-button--regular);
+
+  cursor: pointer;
+}
+
+.content-button:hover {
+  background-color: var(--bg-color-primary--hover);
+}
+
+.hiddenParagraph {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s ease-in;
+}
+
+.hiddenParagraph.visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 1000px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.margin {
+  margin-block: 200vh;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .content-wrapper {
+    padding-block: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    max-width: 375px;
+    min-height: 764px;
+  }
+
+  .content-wrapper {
+    max-height: 464px;
+    padding-inline: none;
+  }
+
+  .no-max-height {
+    max-height: none;
+    padding-top: 2rem;
+  }
+
+  .content {
+    max-width: 343px;
+    min-height: 339px;
+
+    gap: 16px;
+  }
+
+  .content p {
+    font-size: var(--fs-text--small);
+    line-height: var(--lh-text--small);
+  }
+
+  .content h1 {
+    font-size: var(--fs-heading--small);
+    line-height: var(--lh-heading--small);
+  }
+
+  .content-button {
+    width: 110px;
+    height: 48px;
+
+    font-size: var(--fs-btn-small);
+    line-height: var(--lh-button--small);
+
+    padding-block: 8px;
+    padding-inline: 22px;
+  }
+}
